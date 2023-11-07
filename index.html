@@ -40,7 +40,9 @@
         </ul>
     </section>
 
-    <section id="skills">
+    <button id="toggle-skills">Mostrar/Ocultar Habilidades</button>
+
+    <section id="skills" class="hidden">
         <h2>Habilidades</h2>
         <ul>
             <li>HTML</li>
@@ -65,5 +67,16 @@
     </section>
 
     <script src="script.js"></script>
+    <script>
+        // Script para habilitar el desplazamiento suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>

@@ -23,3 +23,8 @@
 #menu a:hover {
     background-color: #555;
 }
+
+/* Agregar una clase 'hidden' para ocultar la sección */
+.hidden {
+    display: none;
+}
