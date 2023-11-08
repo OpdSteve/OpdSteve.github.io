@@ -1,5 +1,3 @@
-// script.js
-
 document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('#menu a').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
