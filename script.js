@@ -1,11 +1,16 @@
 // script.js
 
-// Obtener el botón y la sección de habilidades
-const toggleButton = document.getElementById("toggle-skills");
-const skillsSection = document.getElementById("skills");
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('#menu a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetSection = document.querySelector(this.getAttribute('href'));
 
-// Escuchar el clic en el botón
-toggleButton.addEventListener("click", () => {
-    // Alternar la clase 'hidden' en la sección de habilidades
-    skillsSection.classList.toggle("hidden");
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.remove('active');
+            });
+
+            targetSection.classList.add('active');
+        });
+    });
 });

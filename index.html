@@ -7,76 +7,57 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Mi Nombre</h1>
-        <p>Desarrollador Web</p>
-    </header>
-
-    <ul id="menu">
-        <li><a href="#about">Sobre Mí</a></li>
-        <li><a href="#projects">Proyectos</a></li>
-        <li><a href="#skills">Habilidades</a></li>
-        <li><a href="#education">Educación</a></li>
-        <li><a href="#contact">Contacto</a></li>
-    </ul>
-
-    <section id="about">
-        <h2>Sobre Mí</h2>
-        <p>Aquí puedes escribir una breve descripción sobre ti y tus habilidades.</p>
-    </section>
-
-    <section id="projects">
-        <h2>Proyectos</h2>
+    <div id="menu">
         <ul>
-            <li>
-                <h3>Proyecto 1</h3>
-                <p>Descripción del primer proyecto.</p>
-            </li>
-            <li>
-                <h3>Proyecto 2</h3>
-                <p>Descripción del segundo proyecto.</p>
-            </li>
-            <!-- Puedes añadir más proyectos aquí -->
+            <li><a href="#about">Sobre Mí</a></li>
+            <li><a href="#projects">Proyectos</a></li>
+            <li><a href="#skills">Habilidades</a></li>
+            <li><a href="#education">Educación</a></li>
+            <li><a href="#contact">Contacto</a></li>
         </ul>
-    </section>
+    </div>
+    <div id="content">
+        <section id="about" class="active">
+            <h2>Sobre Mí</h2>
+            <p>Aquí puedes escribir una breve descripción sobre ti y tus habilidades.</p>
+        </section>
 
-    <button id="toggle-skills">Mostrar/Ocultar Habilidades</button>
+        <section id="projects">
+            <h2>Proyectos</h2>
+            <ul>
+                <li>
+                    <h3>Proyecto 1</h3>
+                    <p>Descripción del primer proyecto.</p>
+                </li>
+                <li>
+                    <h3>Proyecto 2</h3>
+                    <p>Descripción del segundo proyecto.</p>
+                </li>
+            </ul>
+        </section>
 
-    <section id="skills" class="hidden">
-        <h2>Habilidades</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <!-- Añade tus habilidades aquí -->
-        </ul>
-    </section>
+        <section id="skills">
+            <h2>Habilidades</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+        </section>
 
-    <section id="education">
-        <h2>Educación</h2>
-        <ul>
-            <li>Grado en Informática</li>
-            <li>Universidad XYZ</li>
-            <!-- Añade tu educación aquí -->
-        </ul>
-    </section>
+        <section id="education">
+            <h2>Educación</h2>
+            <ul>
+                <li>Grado en Informática</li>
+                <li>Universidad XYZ</li>
+            </ul>
+        </section>
 
-    <section id="contact">
-        <h2>Contacto</h2>
-        <p>Puedes contactarme en: correo@example.com</p>
-    </section>
-
+        <section id="contact">
+            <h2>Contacto</h2>
+            <p>Puedes contactarme en: correo@example.com</p>
+        </section>
+    </div>
     <script src="script.js"></script>
-    <script>
-        // Script para habilitar el desplazamiento suave
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
 </body>
 </html>
