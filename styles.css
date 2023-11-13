@@ -5,8 +5,13 @@ body {
     display: flex;
 }
 
+#wrapper {
+    display: flex;
+    width: 100%;
+}
+
 #menu {
-    width: 70px;
+    width: 70px; /* Ancho inicial del menú */
     background-color: #333;
     color: #fff;
     position: fixed;
@@ -24,7 +29,7 @@ body {
 }
 
 #menu:hover {
-    width: 200px;
+    width: 200px; /* Ancho del menú expandido */
 }
 
 ul {
@@ -48,11 +53,12 @@ a {
 }
 
 #menu .menu-text {
-    display: none; /* Por defecto, oculta el texto del menú */
+    display: none;
+    margin-left: 10px;
 }
 
 #menu:hover .menu-text {
-    display: inline-block; /* Muestra el texto cuando el menú está extendido */
+    display: inline-block;
 }
 
 #menu li.active {
@@ -64,6 +70,7 @@ a {
     padding: 20px;
     margin-left: 70px;
     transition: margin-left 0.3s;
+    overflow-x: hidden;
 }
 
 #menu:hover + #content {
@@ -71,6 +78,8 @@ a {
 }
 
 section {
+    width: calc(100% - 40px);
+    box-sizing: border-box;
     display: none;
     padding: 20px;
     background-color: #f0f0f0;
@@ -82,20 +91,10 @@ section.active {
     display: block;
 }
 
-@media screen and (max-width: 768px) {
-    #menu {
-        width: 100%;
-    }
-
-    #content {
-        margin-left: 0;
-    }
-
-    #menu:hover {
-        width: 100%;
-    }
-
-    #menu:hover + #content {
-        margin-left: 0;
-    }
+.section-title {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    margin-bottom: 10px;
 }
