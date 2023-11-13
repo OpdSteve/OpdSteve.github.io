@@ -1,4 +1,3 @@
-/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,7 +5,6 @@ body {
     display: flex;
 }
 
-/* Estilos del menú lateral */
 #menu {
     width: 70px;
     background-color: #333;
@@ -20,7 +18,6 @@ body {
     align-items: center;
     justify-content: space-around;
     transition: width 0.3s;
-    /* Agregar el sombreado */
     -webkit-box-shadow: 0px 0px 165px 16px rgba(68, 49, 151, 1);
     -moz-box-shadow: 0px 0px 165px 16px rgba(68, 49, 151, 1);
     box-shadow: 0px 0px 165px 16px rgba(68, 49, 151, 1);
@@ -42,9 +39,26 @@ li {
 a {
     color: #fff;
     text-decoration: none;
+    display: flex;
+    align-items: center;
 }
 
-/* Estilos del contenido */
+#menu i {
+    font-size: 24px;
+}
+
+#menu .menu-text {
+    display: none; /* Por defecto, oculta el texto del menú */
+}
+
+#menu:hover .menu-text {
+    display: inline-block; /* Muestra el texto cuando el menú está extendido */
+}
+
+#menu li.active {
+    background-color: #555;
+}
+
 #content {
     flex: 1;
     padding: 20px;
@@ -56,7 +70,6 @@ a {
     margin-left: 200px;
 }
 
-/* Estilos de las secciones */
 section {
     display: none;
     padding: 20px;
@@ -67,4 +80,22 @@ section {
 
 section.active {
     display: block;
+}
+
+@media screen and (max-width: 768px) {
+    #menu {
+        width: 100%;
+    }
+
+    #content {
+        margin-left: 0;
+    }
+
+    #menu:hover {
+        width: 100%;
+    }
+
+    #menu:hover + #content {
+        margin-left: 0;
+    }
 }

@@ -4,60 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Currículum</title>
+    <!-- Script de Font Awesome Kit -->
+    <script src="https://kit.fontawesome.com/2c8dc0dab1.js" crossorigin="anonymous"></script>
+    <!-- Estilos personalizados -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="menu">
-        <ul>
-            <li><a href="#about">Sobre Mí</a></li>
-            <li><a href="#projects">Proyectos</a></li>
-            <li><a href="#skills">Habilidades</a></li>
-            <li><a href="#education">Educación</a></li>
-            <li><a href="#contact">Contacto</a></li>
-        </ul>
+    <div id="wrapper">
+        <div id="menu">
+            <ul>
+                <li><a href="#about"><i class="far fa-user"></i><span class="menu-text">Sobre Mí</span></a></li>
+                <li><a href="#projects"><i class="fas fa-code"></i><span class="menu-text">Proyectos</span></a></li>
+                <li><a href="#skills"><i class="fas fa-rocket"></i><span class="menu-text">Habilidades</span></a></li>
+                <li><a href="#education"><i class="fas fa-graduation-cap"></i><span class="menu-text">Educación</span></a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i><span class="menu-text">Contacto</span></a></li>
+            </ul>
+        </div>
+        <div id="content">
+            <section id="about" class="active">
+                <h2>Sobre Mí</h2>
+                <p>Aquí puedes escribir una breve descripción sobre ti y tus habilidades.</p>
+            </section>
+
+            <section id="projects">
+                <h2>Proyectos</h2>
+                <ul>
+                    <li>
+                        <h3>Proyecto 1</h3>
+                        <p>Descripción del primer proyecto.</p>
+                    </li>
+                    <li>
+                        <h3>Proyecto 2</h3>
+                        <p>Descripción del segundo proyecto.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="skills">
+                <h2>Habilidades</h2>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
+            </section>
+
+            <section id="education">
+                <h2>Educación</h2>
+                <ul>
+                    <li>Grado en Informática</li>
+                    <li>Universidad XYZ</li>
+                </ul>
+            </section>
+
+            <section id="contact">
+                <h2>Contacto</h2>
+                <p>Puedes contactarme en: correo@example.com</p>
+            </section>
+        </div>
     </div>
-    <div id="content">
-        <section id="about" class="active">
-            <h2>Sobre Mí</h2>
-            <p>Aquí puedes escribir una breve descripción sobre ti y tus habilidades.</p>
-        </section>
-
-        <section id="projects">
-            <h2>Proyectos</h2>
-            <ul>
-                <li>
-                    <h3>Proyecto 1</h3>
-                    <p>Descripción del primer proyecto.</p>
-                </li>
-                <li>
-                    <h3>Proyecto 2</h3>
-                    <p>Descripción del segundo proyecto.</p>
-                </li>
-            </ul>
-        </section>
-
-        <section id="skills">
-            <h2>Habilidades</h2>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-            </ul>
-        </section>
-
-        <section id="education">
-            <h2>Educación</h2>
-            <ul>
-                <li>Grado en Informática</li>
-                <li>Universidad XYZ</li>
-            </ul>
-        </section>
-
-        <section id="contact">
-            <h2>Contacto</h2>
-            <p>Puedes contactarme en: correo@example.com</p>
-        </section>
-    </div>
-    <script src="script.js"></script>
+    <!-- Script JavaScript -->
+    <script src="script.js?v=1.0"></script>
 </body>
 </html>

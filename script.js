@@ -2,13 +2,11 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('#menu a').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            const targetSection = document.querySelector(this.getAttribute('href'));
+            const targetSection = document.getElementById(this.getAttribute('href').substring(1));
 
-            document.querySelectorAll('section').forEach(section => {
-                section.classList.remove('active');
+            document.querySelectorAll('[id]').forEach(section => {
+                section.classList.toggle('active', section === targetSection);
             });
-
-            targetSection.classList.add('active');
         });
     });
 });
