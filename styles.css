@@ -11,7 +11,7 @@ body {
 }
 
 #menu {
-    width: 70px; /* Ancho inicial del menú */
+    width: 70px;
     background-color: #333;
     color: #fff;
     position: fixed;
@@ -29,7 +29,7 @@ body {
 }
 
 #menu:hover {
-    width: 200px; /* Ancho del menú expandido */
+    width: 200px;
 }
 
 ul {
@@ -97,4 +97,18 @@ section.active {
     background-color: #333;
     color: #fff;
     margin-bottom: 10px;
+}
+
+/* Nuevos estilos para la sección "Sobre Mí" */
+.section-title h2 {
+    margin: 0;
+}
+
+.about-content {
+    text-align: justify;
+}
+
+.about-content h3 {
+    color: #333;
+    margin-top: 20px;
 }
